@@ -7,7 +7,7 @@
 makeCacheMatrix <- function(x = matrix()) {
 	    ## global variable to store inversed matrix
 	    i <- NULL
-	    ## set the 
+	     
         set <- function(y) {
                 x <<- y
                 i <<- NULL
@@ -15,6 +15,7 @@ makeCacheMatrix <- function(x = matrix()) {
         get <- function() x
         setinverse <- function(solve) i <<- solve
         getinverse <- function() i
+        ## return the results as a list containing the defined functions
         list(set = set, get = get,
              setinverse = setinverse,
              getinverse = getinverse)
